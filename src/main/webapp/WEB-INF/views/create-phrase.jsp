@@ -26,27 +26,32 @@
         <div class="panel-heading">Create New Phrase Verb</div>
     </div>
     <div class="panel-body">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-        <div class="form-group">
-            <label for="enMeaning">Meaning In English:</label>
-            <input type="text" class="form-control" id="enMeaning">
-        </div>
-        <div class="form-group">
-            <label for="viMeaning">Meaning In Vietnamese:</label>
-            <input type="text" class="form-control" id="viMeaning">
-        </div>
-        <div class="form-group">
-            <label for="enExample">Example In English:</label>
-            <input type="text" class="form-control" id="enExample">
-        </div>
-        <div class="form-group">
-            <label for="viExample">Example In Vietnamese:</label>
-            <input type="text" class="form-control" id="viExample">
-        </div>
+        <form role="form" data-toggle="validator">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+                <div id="check-exist"></div>
+            </div>
+            <div class="form-group">
+                <label for="enMeaning">Meaning In English:</label>
+                <input type="text" class="form-control" id="enMeaning">
+            </div>
+            <div class="form-group">
+                <label for="viMeaning">Meaning In Vietnamese:</label>
+                <input type="text" class="form-control" id="viMeaning" required>
+            </div>
+            <div class="form-group">
+                <label for="enExample">Example In English:</label>
+                <input type="text" class="form-control" id="enExample" required>
+            </div>
+            <div class="form-group">
+                <label for="viExample">Example In Vietnamese:</label>
+                <input type="text" class="form-control" id="viExample">
+            </div>
         <button type="button" class="btn btn-success" id="submit">Submit</button>
+        </form>
+        <br/>
+        <div id="result"></div>
     </div>
 </div>
 </body>

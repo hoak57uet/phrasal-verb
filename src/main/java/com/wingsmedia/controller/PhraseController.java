@@ -33,6 +33,11 @@ public class PhraseController {
     return new ResponseDTO<PhraseDTO>(phraseService.createPhrase(name, enMeaning, viMeaning, enExample, viExample));
   }
 
+  @RequestMapping(value = "/is-exist", method = RequestMethod.POST)
+  ResponseDTO<Boolean> checkPhraseExist(@RequestParam("name") String name) {
+    return new ResponseDTO<>(phraseService.chekExist(name));
+  }
+
   @RequestMapping(value = "/list", method = RequestMethod.GET)
   ResponseDTO<List<PhraseDTO>> listPhrase(@RequestParam(value = "searchStr", required = false) String searchStr,
                                           @RequestParam(value = "page", required = false) Integer page,

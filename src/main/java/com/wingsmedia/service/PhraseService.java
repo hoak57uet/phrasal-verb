@@ -42,4 +42,9 @@ public class PhraseService implements IPhraseService {
     List<Phrase> phrases = phraseDao.findAll(searchStr, page, pageSize);
     return MapUtils.mapList(phrases, PhraseDTO.class);
   }
+
+  @Override
+  public Boolean chekExist(String name) {
+    return phraseDao.isExistPhrase(name);
+  }
 }

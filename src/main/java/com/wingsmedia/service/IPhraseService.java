@@ -13,4 +13,6 @@ public interface IPhraseService {
   PhraseDTO createPhrase(String name, String enMeaning, String viMeaning, String enExample, String viExample);
 
   List<PhraseDTO> listPhrases(String searchStr, Integer page, Integer pageSize);
+
+  Boolean chekExist(String name);
 }
