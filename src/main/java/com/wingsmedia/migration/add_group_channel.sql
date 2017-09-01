@@ -1,0 +1,1 @@
+ALTER table tv_channel add group_id VARCHAR ;

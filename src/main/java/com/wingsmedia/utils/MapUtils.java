@@ -18,4 +18,9 @@ public class MapUtils {
     }
     return result;
   }
+
+  public static <T, E> T map(E from, Class<T> clazz) {
+    DozerBeanMapper mapper = new DozerBeanMapper();
+    return mapper.map(from, clazz);
+  }
 }
